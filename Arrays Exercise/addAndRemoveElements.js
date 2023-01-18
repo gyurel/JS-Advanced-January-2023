@@ -11,8 +11,10 @@ function solve(arr){
     for (let index = 1; index < inputCommands.length +1; index++){
         let currentCommand = inputCommands[index - 1];
         if(currentCommand == 'add'){
+            // commands[currentCommand];
             resultArr.push(index);
         }else if(currentCommand == 'remove'){
+            // commands[currentCommand];
             resultArr.pop();
         }
     }
