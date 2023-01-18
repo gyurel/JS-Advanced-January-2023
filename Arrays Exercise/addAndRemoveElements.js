@@ -3,19 +3,19 @@ function solve(arr){
 
     let resultArr = [];
     
-    // const commands = {
-    //     'add': (resultArr, index) => resultArr.push(index),
-    //     'remove': (resultArr) => resultArr.pop(),
-    // };
+    const commands = {
+        'add': (resultArr, index) => resultArr.push(index),
+        'remove': (resultArr) => resultArr.pop(),
+    };
 
     for (let index = 1; index < inputCommands.length +1; index++){
         let currentCommand = inputCommands[index - 1];
         if(currentCommand == 'add'){
-            // commands[currentCommand];
-            resultArr.push(index);
+            commands[currentCommand](resultArr, index);
+            // resultArr.push(index);
         }else if(currentCommand == 'remove'){
-            // commands[currentCommand];
-            resultArr.pop();
+            commands[currentCommand](resultArr);
+            // resultArr.pop();
         }
     }
 
