@@ -31,7 +31,7 @@ function solve(currentCarOrder){
         wheelSize -= 1
     }
 
-    resultObj['wheelsize'] = Array(4).fill(wheelSize);
+    resultObj['wheels'] = Array(4).fill(wheelSize);
 
     // console.log(resultObj);
     return resultObj;
