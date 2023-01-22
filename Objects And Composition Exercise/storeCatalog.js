@@ -23,7 +23,7 @@ function solve(products){
         for (const product of sortedProducts) {
             let currentProduct = product;
             let currentPrice = resultObject[key][product];
-            console.log(`  ${currentProduct} : ${currentPrice}`);
+            console.log(`  ${currentProduct}: ${currentPrice}`);
         }
     }
 }
