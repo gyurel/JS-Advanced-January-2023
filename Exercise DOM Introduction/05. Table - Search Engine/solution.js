@@ -3,7 +3,8 @@ function solve() {
 
    function onClick() {
       let tableRows = document.querySelectorAll('tbody tr');
-      let searchText = document.querySelector('#searchField').value;
+      let searchInputField = document.querySelector('#searchField');
+      let searchText = searchInputField.value;
       
       for (const row of tableRows) {
          // debugger
@@ -17,6 +18,6 @@ function solve() {
          };
       };
       // debugger
-      searchText = '';
+      searchInputField.value = '';
    };
 }
