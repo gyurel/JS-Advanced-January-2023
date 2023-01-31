@@ -68,7 +68,7 @@ function solve() {
       }
     }
     resultText += `Bought furniture: ${furnitures.join(', ')}\n`;
-    resultText += `Total price: ${totalPrice}\n`;
+    resultText += `Total price: ${totalPrice.toFixed(2)}\n`;
     resultText += `Average decoration factor: ${totalDecFactor / furnitures.length}`;
     document.querySelectorAll('textarea')[1].textContent = resultText;
   }
