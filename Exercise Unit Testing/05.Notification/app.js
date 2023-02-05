@@ -6,7 +6,7 @@ function notify(message) {
   notificationDiv.style.display = 'block';
 
   function onclick(){
-    notificationDiv.style.display = '';
+    notificationDiv.style.display = 'none';
     notificationDiv.textContent = '';
   }
 }
