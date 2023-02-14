@@ -26,15 +26,19 @@ function solve() {
         // let checkOutDate = checkOutDateField.value;
 
         // let days = checkOutDate.getDay() - checkInDate.getDay();
+        let typeofDate = typeof checkInDate.getTime();
 
         
         if(firstName == '' 
         || lastName == '' 
+        || checkInDateField.value == ''
+        || checkOutDateField.value == ''
         || checkInDate >= checkOutDate 
         || numberOfPeople == ''
         ){
             return;
         }else{
+            debugger
             let liElement = document.createElement('li');
             liElement.classList.add("reservation-content");
             
@@ -50,7 +54,7 @@ function solve() {
             articleElement.appendChild(firstP);
 
             let secondP = document.createElement('p');
-            secondP.textContent = `From date: ${checkOutDate.getFullYear()}-${String(checkOutDate.getMonth() + 1).length == 1 ? '0'+ (checkOutDate.getMonth() + 1) : checkOutDate.getMonth() + 1}-${String(checkOutDate.getDate()).length == 1 ? '0' + checkOutDate.getDate() : checkOutDate.getDate()}`;
+            secondP.textContent = `To date: ${checkOutDate.getFullYear()}-${String(checkOutDate.getMonth() + 1).length == 1 ? '0'+ (checkOutDate.getMonth() + 1) : checkOutDate.getMonth() + 1}-${String(checkOutDate.getDate()).length == 1 ? '0' + checkOutDate.getDate() : checkOutDate.getDate()}`;
             articleElement.appendChild(secondP);
 
             let thirdP = document.createElement('p');
@@ -92,7 +96,7 @@ function solve() {
                     nextButton.disabled = false;
                     confirmReservationField.removeChild(liElement);
                     verificationH1.classList.add('reservation-confirmed');
-                    verificationH1.textContent = 'Confirmed';
+                    verificationH1.textContent = 'Confirmed.';
                 })
                 liElement.appendChild(confirmButton);
 
@@ -103,7 +107,7 @@ function solve() {
                     nextButton.disabled = false;
                     confirmReservationField.removeChild(liElement);
                     verificationH1.classList.add('reservation-cancelled');
-                    verificationH1.textContent = 'Cancelled';
+                    verificationH1.textContent = 'Cancelled.';
 
                 })
                 liElement.appendChild(cancelButton);
