@@ -76,12 +76,11 @@ class footballTeam{
                     }else if(difference < 5){
                         return `${name} will sign a contract for ${difference} years with ${this.clubName} in ${this.country}!`
                     
-                    }else{
-                        return `${name} is above age limit!`
                     }
+                }else{
+                        return `${name} is above age limit!`
                 }
             }
-            
         }
         throw new Error(`${name} is not invited to the selection list!`)
     }
