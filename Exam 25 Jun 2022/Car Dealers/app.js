@@ -2,16 +2,16 @@ window.addEventListener("load", solve);
 
 function solve() {
     let create = {
-        li: () => document.createElement('li'),
-        ul: () => document.createElement('ul'),
-        div: () => document.createElement('div'),
-        span: () => document.createElement('span'),
-        td: () => document.createElement('td'),
-        tr: () => document.createElement('tr'),
-        strong: () => document.createElement('strong'),
-        button: () => document.createElement('button'),
+        li: function(){return document.createElement('li')}(),
+        ul: function(){return document.createElement('ul')}(),
+        div: function(){return document.createElement('div')}(),
+        span: function(){return document.createElement('span')}(),
+        td: function(){return document.createElement('td')}(),
+        tr: function(){return document.createElement('tr')}(),
+        strong: function(){return document.createElement('strong')}(),
+        button: function(){return document.createElement('button')}(),
     }
-    
+
     
     let makeElementField = document.getElementById('make');
     let modelElementField = document.getElementById('model');
@@ -55,7 +55,7 @@ function solve() {
         td1.textContent = make;
         tr.appendChild(td1);
 
-        let td2 = create.td();
+        let td2 = create.td;
         td2.textContent = model;
         tr.appendChild(td2);
         let td3 = document.createElement('td');
