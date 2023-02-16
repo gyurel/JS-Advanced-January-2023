@@ -1,6 +1,17 @@
 window.addEventListener("load", solve);
 
 function solve() {
+    let create = {
+        li: () => document.createElement('li'),
+        ul: () => document.createElement('ul'),
+        div: () => document.createElement('div'),
+        span: () => document.createElement('span'),
+        td: () => document.createElement('td'),
+        tr: () => document.createElement('tr'),
+        strong: () => document.createElement('strong'),
+        button: () => document.createElement('button'),
+    }
+    
     let makeElementField = document.getElementById('make');
     let modelElementField = document.getElementById('model');
     let yearElementField = document.getElementById('year');
@@ -43,7 +54,7 @@ function solve() {
         td1.textContent = make;
         tr.appendChild(td1);
 
-        let td2 = document.createElement('td');
+        let td2 = create.td();
         td2.textContent = model;
         tr.appendChild(td2);
         let td3 = document.createElement('td');
@@ -125,3 +136,5 @@ function solve() {
         }
     }
 }
+
+
