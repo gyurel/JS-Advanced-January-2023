@@ -45,7 +45,7 @@ function solve() {
     p1.textContent = `${gender}, ${age}`;
     article.appendChild(p1);
     let p2 = document.createElement('p');
-    p2.textContent = descripion;
+    p2.textContent = `Dish description: ${descripion}`;
     article.appendChild(p2);
     li.appendChild(article);
 
